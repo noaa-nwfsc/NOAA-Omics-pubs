@@ -57,7 +57,7 @@ ggplot(Noaa_omicsPubs %>%
          filter(`Publication.Year` > 2019), 
        aes(`Publication.Year`, y = cumsum(after_stat(count)))) +
   geom_bar(fill = "#003087") + 
-  theme_classic() + 
+  theme_classic(base_size = 14) + 
   ylab("Cumulative Publications") +
   ggtitle("NOAA 'Omics Cumulative Publications by Year") +
   scale_x_continuous(name = "Publication Year", breaks = seq(2020,2025,1))
@@ -72,14 +72,14 @@ ggplot(Noaa_omicsPubs %>%
          filter(`Publication.Year` > 2019 & `Publication.Year` < 2025), 
        aes(`Publication.Year`, y = cumsum(after_stat(count)))) +
   geom_bar(fill = "#003087") + 
-  theme_classic() + 
+  theme_classic(base_size = 14) + 
   ylab("Cumulative Publications") +
   ggtitle("NOAA 'Omics Cumulative Publications by Year") +
   scale_x_continuous(name = "Publication Year", breaks = seq(2020,2025,1))
 
 
 # Save the plot as a high quality PNG
-ggsave("Cumulative publications by year_2024.png", dpi = 600)
+ggsave("Cumulative publications by year_2024_increasefontsize.png", dpi = 600)
 
 
 
