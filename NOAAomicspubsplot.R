@@ -79,7 +79,7 @@ ggplot(Noaa_omicsPubs %>%
 
 
 # Save the plot as a high quality PNG
-ggsave("Cumulative publications by year_2024_increasefontsize.png", dpi = 600)
+ggsave("Cumulative publications by year_2024_increasefontsize.png", dpi = 600, width = 6)
 
 
 
